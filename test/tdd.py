@@ -10,6 +10,13 @@ class TestSum(unittest.TestCase):
     def test_sum_tuple(self):  # defining the condition to fail the tuple method.
         self.assertEqual(sum((2, 3, 6)), 12, 'Should be 12 as well')
 
+    def test_sum_str(self):
+        values = ['True', '1', 2]
+        # values = {'a':1, 'b':2, 'c':3}
+        # values = sum(values[values])
+        # sum(values[values]) = sum.values(values)
+        self.assertEqual(sum([values]), 4, 'Should be 4 only.')
+
 
 if __name__ == '__main__':
     unittest.main()
