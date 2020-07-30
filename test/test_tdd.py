@@ -17,6 +17,12 @@ class TestSum(unittest.TestCase):
         values = ['True', '1', 2]
         self.assertEqual(sum([values]), 4, 'Should be 4 only.')
 
+    def test_sum_negative(self):
+        """ defining the condition to fail the mixed method."""
+
+        self.assertEqual(sum([-1, 5]), 4, 'Should be 4 only.')
+
+
 
 if __name__ == '__main__':
     unittest.main()
